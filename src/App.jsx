@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Divider from './components/Divider';
 import Why from './components/Why';
 import Capacity from './components/Capacity';
 import Specs from './components/Specs';
@@ -16,7 +17,9 @@ export default function App() {
     <div className="app">
       <Navbar />
       <Hero />
+      <Divider />
       <Why />
+      <Divider />
       <Capacity />
       <Specs />
       <Process />
