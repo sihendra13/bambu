@@ -1,0 +1,45 @@
+.spec-table {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--warm-wht);
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.6fr;
+  gap: 18px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-field {
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.spec-value {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.spec-why {
+  font-size: 0.88rem;
+  color: var(--slate);
+}
+
+@media (max-width: 860px) {
+  .spec-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .spec-value {
+    font-style: normal;
+  }
+}

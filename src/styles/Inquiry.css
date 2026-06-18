@@ -1,0 +1,134 @@
+.inquiry-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.inquiry-grid h2 {
+  font-size: 2.3rem;
+  margin: 12px 0 16px;
+}
+
+.inquiry-grid > div:first-child p {
+  color: var(--slate);
+  margin-bottom: 24px;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.94rem;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+
+.direct-contact {
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+  padding-top: 22px;
+}
+
+.direct-contact .section-eyebrow {
+  font-size: 0.7rem;
+}
+
+.direct-contact a,
+.direct-contact div {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--ocean);
+}
+
+.form-card {
+  background: var(--warm-wht);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.form-row.single {
+  grid-template-columns: 1fr;
+}
+
+.form-field {
+  margin-bottom: 0;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: var(--charcoal);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--warm-wht);
+  color: var(--charcoal);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--ocean-mid);
+  outline-offset: 1px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--earth-dk);
+  color: var(--warm-wht);
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: none;
+  font-family: var(--font-body);
+}
+
+.submit-btn:hover {
+  background: var(--earth);
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 14px;
+}
+
+@media (max-width: 860px) {
+  .inquiry-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

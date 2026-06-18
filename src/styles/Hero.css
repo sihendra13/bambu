@@ -1,0 +1,91 @@
+.hero {
+  padding-top: 120px;
+  padding-bottom: 64px;
+  background: linear-gradient(180deg, var(--warm-wht) 0%, var(--sand) 100%);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3.1rem;
+  color: var(--charcoal);
+  margin: 14px 0 18px;
+  font-weight: 400;
+}
+
+.hero__lede {
+  font-size: 1.12rem;
+  color: var(--slate);
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
+.hero__cta-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background: var(--earth);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-ghost {
+  border: 1.5px solid var(--earth);
+  color: var(--earth-dk);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: rgba(74, 124, 89, 0.05);
+}
+
+.hero__art {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__art svg {
+  width: 100%;
+  max-width: 320px;
+}
+
+@media (max-width: 860px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero__art {
+    order: -1;
+  }
+}
