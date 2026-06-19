@@ -5,9 +5,9 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero__grid">
         <div>
-          <div className="section-eyebrow">Sumbara — Bamboo</div>
+          <div className="section-eyebrow">Sumbara Bamboo</div>
           <h1>Bamboo That Holds the Line</h1>
-          <p className="hero__lede">Indonesian bamboo poles, treated and graded for outdoor fencing and landscape construction — sourced, tested, and shipped through a single verified partner.</p>
+          <p className="hero__lede">Indonesian bamboo poles, treated and graded for outdoor fencing and landscape construction. Sourced, tested, and shipped through a single verified partner.</p>
           <div className="hero__cta-row">
             <a href="#inquiry" className="btn btn-primary">Request specifications</a>
             <a href="#specs" className="btn btn-ghost">View spec sheet</a>

@@ -3,10 +3,10 @@ import '../styles/Process.css';
 export default function Process() {
   const steps = [
     { num: '01', title: 'Harvest', desc: 'Mature culms selected by age and diameter from verified grower partners.' },
-    { num: '02', title: 'Treatment', desc: 'Preservation method applied and logged before drying — the step that decides outdoor lifespan.' },
+    { num: '02', title: 'Treatment', desc: 'Preservation method applied and logged before drying. This step decides outdoor lifespan.' },
     { num: '03', title: 'Sort & QC', desc: 'Diameter, straightness, and moisture verified against spec before grading.' },
     { num: '04', title: 'Pack', desc: 'Bundled and wrapped for container loading, sized to limit transit damage.' },
-    { num: '05', title: 'Ship', desc: 'From the source region to global ports — ready for bulk and repeat orders.' },
+    { num: '05', title: 'Ship', desc: 'From the source region to global ports. Ready for bulk and repeat orders.' },
   ];
 
   return (

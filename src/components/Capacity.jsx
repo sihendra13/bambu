@@ -14,7 +14,7 @@ export default function Capacity() {
         <div className="section-head center">
           <div className="section-eyebrow">Supply Capability</div>
           <h2>Built for fence runs. Ready to scale.</h2>
-          <p>Direct sourcing from verified bamboo growers, structured to deliver consistent quality at container volume — not one good batch.</p>
+          <p>Direct sourcing from verified bamboo growers, structured to deliver consistent quality at container volume. Not one good batch.</p>
         </div>
         <div className="cap-grid">
           {stats.map((stat, i) => (

@@ -16,7 +16,7 @@ export default function Community() {
             <div>
               <div className="section-eyebrow community-eyebrow">Community & Sustainability</div>
               <h2>From the grove. For the grower.</h2>
-              <p>Every pole sourced supports the livelihood of rural bamboo growers. Bamboo regenerates in three to five years without replanting — among the fastest-growing renewable building materials in the world.</p>
+              <p>Every pole sourced supports the livelihood of rural bamboo growers. Bamboo regenerates in three to five years without replanting, among the fastest-growing renewable building materials in the world.</p>
             </div>
             <div className="comm-stats">
               {stats.map((stat, i) => (

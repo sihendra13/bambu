@@ -14,7 +14,7 @@ export default function Footer() {
             <p className="footer__tagline">Indonesia's Natural Commodities. Global Reach.</p>
             <p className="footer__role">Digital Sourcing Hub</p>
             <p className="footer__desc">
-              Premium Indonesian bamboo for fencing and landscape construction — sourced directly from verified growers and export-ready for global markets.
+              Premium Indonesian bamboo for fencing and landscape construction. Sourced directly from verified growers and export-ready for global markets.
             </p>
           </div>
 
