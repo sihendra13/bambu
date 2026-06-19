@@ -3,11 +3,26 @@ import '../styles/Navbar.css';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', fn);
-    return () => window.removeEventListener('scroll', fn);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+
+      const complianceEl = document.getElementById('compliance');
+      const inquiryEl = document.getElementById('inquiry');
+
+      if (inquiryEl && window.scrollY >= inquiryEl.offsetTop - 200) {
+        setActiveSection('inquiry');
+      } else if (complianceEl && window.scrollY >= complianceEl.offsetTop - 200) {
+        setActiveSection('compliance');
+      } else {
+        setActiveSection('home');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -18,8 +33,8 @@ export default function Navbar() {
           <span className="navbar__logo-text">Sumbara</span>
         </a>
         <ul className="navbar__links">
-          <li><a href="#" className="navbar__link">Bamboo</a></li>
-          <li><a href="#compliance" className="navbar__link">Certifications</a></li>
+          <li><a href="#" className={`navbar__link ${activeSection === 'home' ? 'active' : ''}`}>Bamboo</a></li>
+          <li><a href="#compliance" className={`navbar__link ${activeSection === 'compliance' ? 'active' : ''}`}>Certifications</a></li>
           <li><a href="#inquiry" className="navbar__cta">Request Access</a></li>
         </ul>
       </div>
