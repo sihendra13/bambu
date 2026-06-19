@@ -18,8 +18,7 @@ export default function Navbar() {
           <span className="navbar__logo-text">Sumbara</span>
         </a>
         <ul className="navbar__links">
-          <li><a href="#" className="navbar__link">Seaweed</a></li>
-          <li><a href="#" className="navbar__link current">Bamboo</a></li>
+          <li><a href="#" className="navbar__link">Bamboo</a></li>
           <li><a href="#compliance" className="navbar__link">Certifications</a></li>
           <li><a href="#inquiry" className="navbar__cta">Request Access</a></li>
         </ul>

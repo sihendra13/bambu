@@ -60,11 +60,6 @@
   background: rgba(11, 77, 91, 0.05);
 }
 
-.navbar__link.current {
-  color: var(--earth);
-  font-weight: 600;
-  border-bottom: 2px solid var(--earth);
-}
 
 .navbar__cta {
   background: var(--earth);
