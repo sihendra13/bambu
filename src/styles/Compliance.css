@@ -56,9 +56,9 @@
 }
 
 .cert-item h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.98rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 2px;
   color: var(--charcoal);
 }
