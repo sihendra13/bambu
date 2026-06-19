@@ -9,7 +9,7 @@ export default function Community() {
   ];
 
   return (
-    <section className="bg-sand">
+    <section id="community" className="bg-sand">
       <div className="container">
         <div className="community-band">
           <div className="community-grid">
