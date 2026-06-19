@@ -1,29 +1,23 @@
 import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
-
-      const complianceEl = document.getElementById('compliance');
-      const inquiryEl = document.getElementById('inquiry');
-
-      if (inquiryEl && window.scrollY >= inquiryEl.offsetTop - 200) {
-        setActiveSection('inquiry');
-      } else if (complianceEl && window.scrollY >= complianceEl.offsetTop - 200) {
-        setActiveSection('compliance');
-      } else {
-        setActiveSection('home');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const fn = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', fn);
+    return () => window.removeEventListener('scroll', fn);
   }, []);
+
+  const links = [
+    { href: '#specs', label: 'Products' },
+    { href: '#capacity', label: 'Capacity' },
+    { href: '#compliance', label: 'Certifications' },
+    { href: '#community', label: 'Impact' },
+  ];
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
@@ -32,11 +26,19 @@ export default function Navbar() {
           <span className="navbar__logo-icon">🌿</span>
           <span className="navbar__logo-text">Sumbara</span>
         </a>
-        <ul className="navbar__links">
-          <li><a href="#" className={`navbar__link ${activeSection === 'home' ? 'active' : ''}`}>Bamboo</a></li>
-          <li><a href="#compliance" className={`navbar__link ${activeSection === 'compliance' ? 'active' : ''}`}>Certifications</a></li>
-          <li><a href="#inquiry" className="navbar__cta">Request Access</a></li>
+        <ul className={`navbar__links ${open ? 'navbar__links--open' : ''}`}>
+          {links.map(l => (
+            <li key={l.href}>
+              <a href={l.href} className="navbar__link" onClick={() => setOpen(false)}>{l.label}</a>
+            </li>
+          ))}
+          <li>
+            <a href="#inquiry" className="navbar__cta" onClick={() => setOpen(false)}>Request Access</a>
+          </li>
         </ul>
+        <button className="navbar__burger" onClick={() => setOpen(o => !o)} aria-label="Toggle menu">
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
     </nav>
   );

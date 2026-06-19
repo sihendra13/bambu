@@ -60,9 +60,27 @@
   background: rgba(11, 77, 91, 0.05);
 }
 
-.navbar__link.active {
-  color: var(--earth);
-  font-weight: 600;
+.navbar__burger {
+  display: none;
+  color: #fff;
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .navbar__burger { display: block; }
+  .navbar__links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--ocean);
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    z-index: 99;
+  }
+  .navbar__links--open { display: flex; }
+  .navbar__link { font-size: 22px; padding: 12px 24px; }
+  .navbar__cta { font-size: 18px; padding: 14px 32px; margin: 0; }
 }
 
 
