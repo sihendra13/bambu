@@ -9,7 +9,7 @@ export default function Capacity() {
   ];
 
   return (
-    <section className="bg-sand">
+    <section id="capacity" className="bg-sand">
       <div className="container">
         <div className="section-head center">
           <div className="section-eyebrow">Supply Capability</div>
