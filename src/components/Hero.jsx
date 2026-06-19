@@ -29,6 +29,8 @@ export default function Hero() {
               <circle cx="138" cy="140" r="3"/>
               <circle cx="62" cy="220" r="3"/>
               <circle cx="138" cy="220" r="3"/>
+              <circle cx="62" cy="270" r="3"/>
+              <circle cx="138" cy="270" r="3"/>
             </g>
           </svg>
         </div>
